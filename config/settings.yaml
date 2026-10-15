@@ -1,0 +1,12 @@
+project:
+  name: "Research-OS"
+  version: "2.0.0"
+  environment: "development"
+database:
+  filename: "research_os.db"
+  timeout: 30.0
+logging:
+  level: "INFO"
+  console_output: true
+api:
+  timeout: 60

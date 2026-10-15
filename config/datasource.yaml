@@ -1,0 +1,6 @@
+datasources:
+  un_comtrade:
+    base_url: "https://comtradeapi.un.org/public/v1/preview/C/A/HS"
+    rate_limit_per_minute: 10
+  world_bank:
+    base_url: "https://api.worldbank.org/v2"

@@ -1,0 +1,21 @@
+[project]
+name = "research-os"
+version = "2.0.0"
+description = "Question-driven Research Intelligence Operating System for Empirical Economics and Social Sciences"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "Quan ZHUANG", email = "bricksau@users.noreply.github.com" }
+]
+dependencies = [
+    "pyyaml>=6.0.1",
+    "pandas>=2.2.0",
+    "numpy>=1.26.0",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.black]
+line-length = 88

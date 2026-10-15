@@ -1,0 +1,36 @@
+# Virtual environments
+.venv/
+venv/
+env/
+.conda/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.sqlite
+*.db
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# R artifacts
+.Rhistory
+.RData
+.Rproj.user/
+
+# IDE
+.vscode/
+.idea/
+
+# Local sensitive environment variables
+.env
+
+# Working directories & outputs that should be reproduced by code
+logs/
+workspace/
+
+# Copyrighted literature PDFs
+papers/references_pdf/*.pdf
+!papers/references_pdf/.gitkeep
