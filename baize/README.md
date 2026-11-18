@@ -35,7 +35,7 @@ baize/
 │   └── anti_ai_shield.md              ← 【白泽·辟邪】：50+ 典型 AI 禁用词汇库与学者声调律令
 │
 ├── profiles/
-│   ├── zhuang_empirical_gvc.md        ← 【白泽·庄严】：庄全专属签名风格（量价穿透、微观海关、纯会计分层、操盘风控）
+│   ├── example_empirical_trade.md     ← 【白泽·示例】：示例签名风格（量价剥离、口径穿透、会计分解、预先防辩）
 │   └── custom_profile_template.md     ← 个人风格定义模板（供他人克隆自己的学术签名）
 │
 ├── adapters/                          ← 【白泽·通神】：他人/期刊风格扩展包
@@ -56,7 +56,7 @@ baize/
 1. 打开 `baize/system_prompt_baize_master.md`；
 2. 复制全文，粘贴进你的 **System Prompt** 或 **Custom Instructions**；
 3. 你的 AI 助手即刻被赋予“白泽学术神格”。在撰写或润色时，输入：
-   > “请使用白泽引擎，并加载 `[PROFILE: ZQRIOS]`，对以下段落进行量价分离与防御性学术改写：……”
+   > “请使用白泽引擎，并加载 `[PROFILE: Example_Empirical_Trade]`（或你自己的 Profile），对以下段落进行量价分离与防御性学术改写：……”
 
 ### 场景 B：加载特定学术风格
 如果你希望论文适应特定期刊或导师审阅习惯，只需在对话开头输入指令：
