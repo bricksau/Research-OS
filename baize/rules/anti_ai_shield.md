@@ -8,7 +8,7 @@
 
 1. **病灶一：虚假的高潮与廉价的赞美（Hyperbolic Flattery）**
    - AI 极度喜欢给普通事实贴金，堆砌 “profound”, “revolutionary”, “cornerstone” 等大词；
-   - **学者思维**：事实本身有力量。把数字列出来（降幅 87.4%）、把机制写清楚，比写 10 个 “profound” 都更有说服力。
+   - **学者思维**：事实本身有力量。把数字列出来（如“降幅 40.0%”）、把机制写清楚，比写 10 个 “profound” 都更有说服力。
 
 2. **病灶二：单调的句式钟摆（The Monotonous Metronome）**
    - AI 倾向于连续输出由 `, which ...` 或 `Not only ..., but also ...` 构成的 28~32 词复合句；
@@ -68,6 +68,7 @@
 > *"The rapid escalation of bilateral trade tensions in 2022 not only profoundly affected the global lithium battery supply chain, but also created crucial challenges for South Korean manufacturers, which ultimately compelled policymakers to delve into comprehensive reshoring strategies."* (38 words, 结构臃肿，大词堆叠)
 
 ### ✅ 白泽重构法（严谨、干脆、微观针刺）：
-> *"Bilateral trade tensions escalated sharply after 2022. This shift did not trigger an immediate rupture across the entire value chain. Instead, the pressure was concentrated in downstream battery cells, where South Korea’s export volume fell by 35% while upstream mineral dependence remained largely intact. Consequently, policy responses have focused on selective de-risking rather than outright decoupling."*
-> - **长短句结构**：10词（定基调） → 14词（转折分化） → 26词（微观数据针刺） → 14词（收敛定性）。
+> *"Bilateral trade tensions escalated sharply after 2022. This shift did not trigger an immediate rupture across the entire value chain. Instead, the pressure was concentrated in downstream battery cells, where South Korea’s export volume fell by 30% while upstream mineral dependence remained largely intact. Consequently, policy responses have focused on selective de-risking rather than outright decoupling."*
+> - **说明**：例句中的 30% 是虚构数字，只示范写法。
+> - **长短句结构**：7词（定基调） → 13词（转折分化） → 24词（微观数据针刺） → 12词（收敛定性）。
 > - **呼吸感**：读起来铿锵有力，有骨骼、有肌肉，绝对无法被任何 AI 检测器误判为机械生成。
