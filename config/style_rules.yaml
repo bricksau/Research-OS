@@ -1,0 +1,52 @@
+# Rules for scripts/checks/style_scan.py. The scan only lists candidates with line numbers; whether each one is a
+# problem is a judgment made in context (see .claude/skills/academic-writing/SKILL.md).
+#
+# Built-in checks (switch one off by listing it under `disable`):
+#   enumeration       First, / Second, … 第一，… 첫째 …   (write connected paragraphs instead)
+#   list-in-text      bullet or numbered lines in body text
+#   overclaim         proves, demonstrates that, caused, drove, led to, resulted in …   (word strength vs evidence)
+#   drafting-history  "earlier draft", "the committee", "advisor", "post hoc" …   (the text should not tell its own story)
+#   signpost          "This section will discuss …", "本节将…"
+#   banned            the words below (from baize/rules/anti_ai_shield.md)
+#   retired           stale wording collected from config/claims_register.yaml
+disable: []
+
+banned:
+  - crucial
+  - pivotal
+  - vital role
+  - profound
+  - revolutionary
+  - delve
+  - delves
+  - tapestry
+  - testament to
+  - beacon
+  - seamlessly
+  - game-changer
+  - landscape
+  - it is worth noting
+  - it should be noted
+  - sheds light
+  - in the realm of
+  - nuanced
+  - underscore
+  - not merely
+  - definitively
+  - 值得注意的是
+  - 至关重要
+  - 不难看出
+  - 综上所述
+  - 深刻地重塑
+  - 颠覆性
+  - 毫无疑问
+  - 완벽히 입증
+  - 획기적인
+  - 필연적으로
+
+# Project rules: name, regular expression. Examples from a real dissertation (switch on what fits your field):
+extra:
+  # - [percent-word, '(?<!in )\bper ?cent\b']          # write "%"
+  # - [tonnes, '\btonnes?\b|\btons?\b']                # write "t"
+  # - [straight-apostrophe, "[A-Za-z]'[A-Za-z]"]       # Word uses curly ’
+  []

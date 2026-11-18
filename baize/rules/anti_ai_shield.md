@@ -69,5 +69,5 @@
 
 ### ✅ 白泽重构法（严谨、干脆、微观针刺）：
 > *"Bilateral trade tensions escalated sharply after 2022. This shift did not trigger an immediate rupture across the entire value chain. Instead, the pressure was concentrated in downstream battery cells, where South Korea’s export volume fell by 35% while upstream mineral dependence remained largely intact. Consequently, policy responses have focused on selective de-risking rather than outright decoupling."*
-> - **长短句结构**：10词（定基调） $\to$ 14词（转折分化） $\to$ 26词（微观数据针刺） $\to$ 14词（收敛定性）。
+> - **长短句结构**：10词（定基调） → 14词（转折分化） → 26词（微观数据针刺） → 14词（收敛定性）。
 > - **呼吸感**：读起来铿锵有力，有骨骼、有肌肉，绝对无法被任何 AI 检测器误判为机械生成。

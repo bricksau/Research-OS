@@ -1,8 +1,8 @@
-# handoff/ (会话交接与多模型协同)
+# handoff/（交给另一个模型或读者的只读审查）
 
-在严谨的实证研究中，建议将 AI 协同流程划分为三个相互制衡的角色：
-1. **主笔/编写者（Author / Writer）**：使用 Claude / Cursor / 本地环境撰写正文或分析脚本；
-2. **只读审查者（Read-only Reviewer）**：使用 OpenAI Codex / ChatGPT / 独立 AI，执行盲审与交叉质检，**严禁修改任何文件**；
-3. **验证脚本（Automated Auditor）**：Python / R 脚本运行 SSOT 闭环检查，杜绝心算。
+建议把 AI 协同分成三个相互制衡的角色：
+1. **主笔（Author）**：在本仓库里写正文和分析脚本的人或 AI 会话（如 Claude Code），唯一有权改母本；
+2. **只读审查者（Reviewer）**：任何第二模型或第二位读者，用 `review_request_template.md` 盲审、交叉质检，**不改任何文件**，只运行 `scripts/checks/check_all.sh --readonly`；
+3. **验证脚本（Auditor）**：`scripts/checks/check_all.sh`，数字、核心主张和镜像一致性靠脚本，不靠任何一方的记忆。
 
-每次将阶段性研究成果交由审查模型质检时，请复用 `codex_review_template.md`，并将审查结论留存交接记录。
+收回的报告存到 `papers/review/Review_YYYYMMDD_<来源>.md`。报告里的数字和引语先用脚本比对再采用。

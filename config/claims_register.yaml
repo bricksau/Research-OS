@@ -1,0 +1,23 @@
+# Register of core claims: one place to change a claim, and a check that every place says it the same way.
+# scripts/checks/claims_check.py reports
+#   MISSING  a listed phrase is not found where it should be (section = heading number, optional), and
+#   STALE    retired wording is still somewhere in the listed files.
+# When a core claim changes (a hypothesis, a verdict, a definition), change this file first, then every place it lists.
+# Phrases written /like this/ are regular expressions.
+# Lines that mark wording as retired on purpose (containing "❌", "retired" or "废止") are skipped by the STALE check.
+#
+# `search` lists the files that  claims_check.py --where "phrase"  looks through.
+search:
+  - papers/manuscript/Paper_Master_Template.md
+
+claims:
+  # --- example entry; replace with your hypotheses and verdicts ---
+  - id: example-balance-turn
+    statement: The example balance turned from surplus to deficit between 2022 and 2024 (descriptive, not causal).
+    places:
+      - file: papers/manuscript/Paper_Master_Template.md
+        section: "4."
+        phrases:
+          - "moved from a surplus of US$220.3 million in 2022 to a deficit of US$420.7 million in 2024"
+    stale:
+      - "/imports (?:caused|drove) the deficit/"

@@ -33,3 +33,15 @@ Research-OS 旨在解决社科与经济学实证研究中长期的“散乱痛�
 │        rules/academic_grounding.md, baize/ (白泽引擎)     │
 └──────────────────────────────────────────────────────────┘
 ```
+
+## 3. 贯穿五层的检查（v2.1）
+五层之间的“严格回溯”不靠自觉，靠 `scripts/checks/check_all.sh`：
+
+| 连接 | 检查 | 登记处 |
+|---|---|---|
+| Layer 3/4 → Layer 5（数字进正文） | `src/analysis/verify_ssot.py`：从 CSV 重新取值、只四舍五入一次，再到正文查找 | `config/expected_numbers.yaml` |
+| Layer 5 内部（同一主张处处一致） | `scripts/checks/claims_check.py`；`--where` 定位 | `config/claims_register.yaml` |
+| Word 母本 → 可读文本 | `scripts/checks/docx_to_md.py` 生成 `.md` 镜像 | — |
+| Layer 1 → Layer 5（行文） | `scripts/checks/style_scan.py`（只列候选，由人判断） | `config/style_rules.yaml` |
+
+提交前钩子 `.githooks/pre-commit` 在母本、配置、输出表或脚本进入提交时自动运行只读检查。

@@ -22,9 +22,9 @@
 - ❌ **中文绝对禁用词**：
   `深刻地, 划时代的, 完美契合, 不仅...而且... (机械三连排), 毋庸置疑, 显而易见, 浓墨重彩, 织就了画卷`
 - ✅ **替换准则**：用中立、克制的事实动词取代修饰性副词：
-  - *“definitively proves”* $\to$ *“is consistent with / suggests / indicates”*
-  - *“profoundly restructured”* $\to$ *“altered the composition of / led to a measurable shift in”*
-  - *“played a crucial role”* $\to$ *“accounted for [X]% of the variation / served as a primary conduit”*
+  - *“definitively proves”* → *“is consistent with / suggests / indicates”*
+  - *“profoundly restructured”* → *“altered the composition of / is associated with a measurable shift in”*
+  - *“played a crucial role”* → *“accounted for [X]% of the variation / served as a primary conduit”*
 
 ### 铁律 2：学者呼吸感与长短句交错 (Sentence Cadence & Rhythm)
 - 严禁连续出现 3 句结构相同、长度相近（25~30 词）的复合句。
@@ -52,7 +52,7 @@
 默认激活庄全在韩中电池价值链与经贸研究中确立的 5 大杀手锏范式：
 
 1. **【量价双轨剥离】**：撕开名义贸易顺逆差的虚假繁荣。涉及金额剧变时，必须追问“物量变了多少？单价变了多少？”（如 2024 年氢氧化锂进口额暴跌：单价暴跌 70%，物量仅减 10%）。
-2. **【海关编码制度穿透】**：指出国际 6 位码不分用途的盲区（如 850760 包含数十克的小电芯与公斤级的汽车大电芯），用“单重演进（17g $\to$ 76g）”与“海外本地化生产分流”化解数据矛盾。
+2. **【海关编码制度穿透】**：指出国际 6 位码不分用途的盲区（如 850760 包含数十克的小电芯与公斤级的汽车大电芯），用“单重演进（17g → 76g）”与“海外本地化生产分流”化解数据矛盾。
 3. **【纯会计事实技术】**：将 CMS 恒等式（$\Delta X \equiv \text{MGE} + \text{CE} + \text{IE}$）定位为事实描述，政策作为定性情境机制，不玩弄虚假的计量 Dummy。
 4. **【非对称相互依存理论】**：深度锚定 Keohane & Nye (1977) 与 Farrell & Newman (2019)，聚焦“下游市场准入排他阻断”与“上游咽喉点资源实物捕获”的并存。
 5. **【预先防辩式写作 (Pre-emptive Defense)】**：主动在正文和脚注中化解“为什么不用回归”、“为什么用中方镜像口径不用韩方”、“是不是太显而易见”这三大审稿人刺点。

@@ -6,7 +6,7 @@
 ---
 
 ## 摘要 (Abstract)
-[此处为 200~300 字的精炼摘要。切忌使用 crucial, profound, tapestry 等空洞修饰词。直陈核心问题、实证方法、关键事实发现与政策含义。]
+[此处为 200~300 字的精炼摘要。不用空洞修饰词（清单见 config/style_rules.yaml 的 banned）。直陈核心问题、实证方法、关键事实发现与政策含义。]
 
 ---
 
@@ -27,6 +27,9 @@
 
 ## 4. 实证发现与机制穿透 (Empirical Findings)
 [正文所有数据必须严格与 output/ 保持一致，经过 SSOT 校验。]
+
+<!-- 示例句（合成数据，换成自己的数据后连同 config/expected_numbers.yaml 里的示例条目一起删掉） -->
+In the example data, the trade balance moved from a surplus of US$220.3 million in 2022 to a deficit of US$420.7 million in 2024, as imports rose by 12.8% in the final year.
 
 ---
 

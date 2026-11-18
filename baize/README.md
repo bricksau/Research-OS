@@ -60,9 +60,9 @@ baize/
 
 ### 场景 B：加载特定学术风格
 如果你希望论文适应特定期刊或导师审阅习惯，只需在对话开头输入指令：
-- `[LOAD_ADAPTER: Advisor_Pragmatic]` $\to$ 激活题目与结论降调、单口径化、极简摘要；
-- `[LOAD_ADAPTER: SSCI_Journal_Editor]` $\to$ 激活因果边界声明与内生性防辩；
-- `[LOAD_ADAPTER: ThinkTank_Policy]` $\to$ 激活以“精准去风险（Selective De-risking）”为导向的政策建言。
+- `[LOAD_ADAPTER: Advisor_Pragmatic]` → 激活题目与结论降调、单口径化、极简摘要；
+- `[LOAD_ADAPTER: SSCI_Journal_Editor]` → 激活因果边界声明与内生性防辩；
+- `[LOAD_ADAPTER: ThinkTank_Policy]` → 激活以“精准去风险（Selective De-risking）”为导向的政策建言。
 
 ---
 

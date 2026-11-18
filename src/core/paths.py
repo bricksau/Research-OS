@@ -2,7 +2,8 @@
 
 from pathlib import Path
 
-WORKSPACE_ROOT = Path.cwd().resolve()
+# Anchored to the repository, not to the current directory, so scripts work from any folder.
+WORKSPACE_ROOT = Path(__file__).resolve().parents[2]
 
 CONFIG_DIR = WORKSPACE_ROOT / "config"
 SETTINGS_YAML = CONFIG_DIR / "settings.yaml"
@@ -23,3 +24,7 @@ PAPERS_DIR = WORKSPACE_ROOT / "papers"
 DATA_DIR = WORKSPACE_ROOT / "data"
 HANDOFF_DIR = WORKSPACE_ROOT / "handoff"
 RULES_DIR = WORKSPACE_ROOT / "rules"
+CONFIG_EXPECTED = CONFIG_DIR / "expected_numbers.yaml"
+CLAIMS_REGISTER = CONFIG_DIR / "claims_register.yaml"
+MANUSCRIPT_DIR = PAPERS_DIR / "manuscript"
+TABLES_DIR = OUTPUT_DIR / "tables"

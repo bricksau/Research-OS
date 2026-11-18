@@ -10,6 +10,7 @@
 # leaves everything as it was, and tells you which files clash.
 set -euo pipefail
 cd "$(git rev-parse --show-toplevel)"
+[ -d .githooks ] && git config core.hooksPath .githooks   # the pre-commit checks, on every computer
 
 branch=$(git rev-parse --abbrev-ref HEAD)
 if [ "$branch" = "HEAD" ]; then echo "Not on a branch (detached HEAD). Stop."; exit 1; fi
@@ -31,14 +32,14 @@ if [ -n "$(git status --porcelain)" ]; then
   echo "== Local changes:"; git status --short
   git add -A
   host=$(hostname -s 2>/dev/null || hostname)
-  git commit -q -m "${msg:-sync: $host $(date '+%Y-%m-%d %H:%M')}"
+  RO_SYNC=1 git commit -q -m "${msg:-sync: $host $(date '+%Y-%m-%d %H:%M')}"
   echo "== Committed."
 fi
 
 # 2) Get the other computers' changes
 git fetch -q origin
 if git rev-parse -q --verify "origin/$branch" >/dev/null; then
-  if ! git rebase -q "origin/$branch"; then
+  if ! git rebase -q --autostash "origin/$branch"; then
     clash=$(git diff --name-only --diff-filter=U || true)
     git rebase --abort
     echo

@@ -1,0 +1,40 @@
+# Numbers in the manuscript and where they come from (Single Source of Truth).
+# src/analysis/verify_ssot.py checks, for every entry:
+#   1. the number recomputed from the CSV (filter rows, pick the column, scale, round once) equals `text`;
+#   2. `text` appears in the manuscript.
+# A number that changes on purpose is changed here and in the manuscript in the same commit, never in the script.
+#
+# manuscript: the Markdown master, or the Markdown mirror of a Word master (scripts/checks/docx_to_md.py writes
+#             Paper_Master.md next to Paper_Master.docx).
+manuscript: papers/manuscript/Paper_Master_Template.md
+
+numbers:
+  # --- example entries (synthetic data); delete with the example sentence in section 4 ---
+  - id: example-balance-2022
+    text: "220.3"
+    source: output/tables/example_trade_balance.csv
+    row: {year: "2022"}
+    column: balance_musd
+    decimals: 1
+    why: example – 2022 surplus, US$ million
+  - id: example-balance-2024
+    text: "420.7"
+    source: output/tables/example_trade_balance.csv
+    row: {year: "2024"}
+    column: balance_musd
+    scale: -1          # the sentence says "a deficit of 420.7", so the sign is in the words
+    decimals: 1
+    why: example – 2024 deficit, US$ million
+  - id: example-import-growth-2024
+    text: "12.8%"
+    source: output/tables/example_trade_balance.csv
+    row: {year: "2024"}
+    column: import_growth_pct
+    decimals: 1
+    suffix: "%"
+    why: example – import growth in 2024
+
+# Sentences that must stay in the manuscript (verdicts, key definitions). Change the entry when you change the sentence.
+must_contain:
+  - text: "as imports rose by 12.8% in the final year"
+    why: example – the sentence that carries the result

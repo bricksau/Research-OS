@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# Research-OS pre-commit hook (turned on by bootstrap.py and sync.sh: git config core.hooksPath .githooks).
+# When the manuscript, a config file, an output table or an analysis script is staged, the read-only checks must
+# pass. During scripts/sync/sync.sh (RO_SYNC=1) a failure only warns, so that a save can always be backed up.
+# A Word master must be staged together with its regenerated Markdown mirror.
+# Skip once, on purpose:  git commit --no-verify
+cd "$(git rev-parse --show-toplevel)" || exit 0
+staged=$(git diff --cached --name-only --diff-filter=ACMR)
+echo "$staged" | grep -qE '^(papers/manuscript/|config/|output/tables/|src/)' || exit 0
+command -v python3 >/dev/null 2>&1 || { echo "pre-commit: python3 not found; checks skipped."; exit 0; }
+
+problem=""
+for d in $(echo "$staged" | grep -E '^papers/manuscript/.*\.docx$'); do
+  echo "$staged" | grep -qxF "${d%.docx}.md" || problem="$d is staged without its mirror ${d%.docx}.md (run: bash scripts/checks/check_all.sh, then stage the .md)"
+done
+if [ -z "$problem" ] && ! out=$(bash scripts/checks/check_all.sh --readonly 2>&1); then
+  problem="checks failed:
+$out"
+fi
+[ -z "$problem" ] && exit 0
+if [ "${RO_SYNC:-0}" = "1" ]; then
+  echo "pre-commit (sync, warning only): $problem"; exit 0
+fi
+echo "pre-commit: $problem"
+echo "Fix it, or commit once without the check: git commit --no-verify"
+exit 1
